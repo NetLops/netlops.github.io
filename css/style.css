@@ -126,6 +126,80 @@ hr {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
+#toc {
+  position: fixed;
+  right: 5%;
+  width: 20%;
+  height: 90%;
+  top: 70px;
+}
+#toc {
+  display: none;
+  opacity: 0.8;
+}
+#toc ol::-webkit-scrollbar {
+  display: none;
+}
+@media screen and (min-width: 769px) {
+  #toc {
+    display: block;
+  }
+}
+.sidebar-title {
+  margin-left: 1em;
+}
+.toc-level-1 .toc-text {
+  margin-left: 1em;
+}
+.toc-level-2 .toc-text {
+  margin-left: 2em;
+}
+.toc-level-3 .toc-text {
+  margin-left: 3em;
+}
+.toc-level-4 .toc-text {
+  margin-left: 4em;
+}
+.toc-level-5 .toc-text {
+  margin-left: 5em;
+}
+.toc-level-6 .toc-text {
+  margin-left: 6em;
+}
+.toc-text {
+  white-space: nowrap;
+}
+.toc-link {
+  color: #999;
+  display: inline-block;
+  border-left: 1px solid transparent;
+}
+.toc-link:hover {
+  text-decoration: none;
+}
+.toc {
+  padding: 0;
+  margin: 0;
+  line-height: 1.8em;
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+}
+.toc-child {
+  margin-left: 0;
+  padding-left: 0;
+}
+.toc-item {
+  list-style-type: none;
+}
+.toc-item:hover > .toc-link {
+  border-left: 1px solid $color-theme;
+}
+.toc-item.active > .toc-link {
+  color: $color-theme;
+  border-left: 2px solid $color-theme;
+}
 .post-content .octicon {
   display: inline-block;
   fill: currentColor;
