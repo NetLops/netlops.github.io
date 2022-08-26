@@ -32,6 +32,7 @@ function updateStyle() {
         $(".ba").attr("style", "color: #51525d;");
         $("#bodyx").attr("class", "bg_while");
         $("#update_style").attr('checked', false);
+
     } else {
         $("#footer").attr("style", "");
         $(".flink").attr("style", "");
@@ -39,6 +40,7 @@ function updateStyle() {
         $(".ba").attr("style", "");
         $("#update_style").attr('checked', true);
     }
+    $(".giscus").show()
 }
 
 if (getCookie("style") == null) {
