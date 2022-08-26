@@ -1302,9 +1302,6 @@ label.el-checkbox {
     width: 90%;
     margin: auto;
   }
-  .posts .replay-btn {
-    display: none;
-  }
   .posttime {
     display: none;
   }
