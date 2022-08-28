@@ -382,6 +382,11 @@
 
 <p><strong>接口实现</strong></p>
 <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> GoProgrammer <span class="keyword">struct</span> &#123;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(g *GoProgrammer)</span></span> WriteHelloWorld() <span class="type">string</span> &#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="string">&quot;fmt.Println(\&quot;Hello World\&quot;)&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>接口实现检测</strong></p>
+<blockquote>
+<p>编译期就检查接口是否实现（<code>Golang</code>直接会显示错误，如果没实现），不用等在使用时候才检测</p>
+</blockquote>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> _ GoProgrammer = (*Programmer)(<span class="literal">nil</span>)</span><br></pre></td></tr></table></figure>
 
 <h4 id="go-jie-kou-yu-qi-ta-zhu-liu-bian-cheng-yu-yan-de-chai-yi"><span id="go-jie-kou-yu-qi-ta-zhu-liu-bian-cheng-yu-yan-de-chai-yi">Go接口与其他主流编程语言的差异</span><a href="#go-jie-kou-yu-qi-ta-zhu-liu-bian-cheng-yu-yan-de-chai-yi" class="header-anchor">#</a></h4><ol>
 <li>接口为非入侵性，实现不依赖于接口定义</li>
