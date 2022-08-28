@@ -68,8 +68,8 @@ $("#update_style").change(function() {
 // toc
 function scrollSpy(menuSelector, options) {
     var menu = $(menuSelector);
-    if(!visible(menu))
-        return;
+    // if(!visible(menu))
+    //     return;
     options = options || {};
     var offset = options.offset || 0;
     var activeClassName = options.activeClassName || "active";
