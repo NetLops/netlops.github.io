@@ -127,49 +127,49 @@ $(document).ready(function(){
 
 });
 
-// 页面导航加载
-var anchorMap = {}
-var anchorArray = []
-window.onload=function () {
-    // 滚动加载
-    for (let mao of document.querySelectorAll("h1,h2,h3,h4,h5,h6")) {
-        anchorMap[mao.offsetTop] = '#' + mao.getAttribute("id")
-        anchorArray.push(mao.offsetTop)
-    }
-}
-function findLeft(num) {
-    let left = 0
-    let right = anchorArray.length - 1
-    let flag = false
-    if (right - left > 0) {
-        flag = true
-    }
-    while (left < right) {
-        let mid = left + Math.ceil((right - left) >> 1)
-
-        if (num >= anchorArray[mid]) {
-            left = mid + 1
-        } else {
-            right = mid
-        }
-    }
-    // console.log(left, anchorArray[left], flag)
-    if (flag) {
-        return anchorArray[left]
-    }
-    return -1
-}
-window.addEventListener('scroll', function(event) {
-    let top = Math.floor(document.documentElement.scrollTop)
-    // console.log(Math.floor(document.documentElement.scrollTop), anchorMap[Math.floor(document.documentElement.scrollTop)])
-    // if (anchorMap[Math.floor(document.documentElement.scrollTop)]) {
-    //     window.location.href=anchorMap[Math.floor(document.documentElement.scrollTop)];
-    // }
-    console.log("now:", top)
-    let left = findLeft(top)
-    console.log("left:", left)
-    if (left && left !== -1) {
-        window.location.href=anchorMap[left]
-        document.documentElement.scrollTop = top;
-    }
-})
+// // 页面导航加载
+// var anchorMap = {}
+// var anchorArray = []
+// window.onload=function () {
+//     // 滚动加载
+//     for (let mao of document.querySelectorAll("h1,h2,h3,h4,h5,h6")) {
+//         anchorMap[mao.offsetTop] = '#' + mao.getAttribute("id")
+//         anchorArray.push(mao.offsetTop)
+//     }
+// }
+// function findLeft(num) {
+//     let left = 0
+//     let right = anchorArray.length - 1
+//     let flag = false
+//     if (right - left > 0) {
+//         flag = true
+//     }
+//     while (left < right) {
+//         let mid = left + Math.ceil((right - left) >> 1)
+//
+//         if (num >= anchorArray[mid]) {
+//             left = mid + 1
+//         } else {
+//             right = mid
+//         }
+//     }
+//     // console.log(left, anchorArray[left], flag)
+//     if (flag) {
+//         return anchorArray[left]
+//     }
+//     return -1
+// }
+// window.addEventListener('scroll', function(event) {
+//     let top = Math.floor(document.documentElement.scrollTop)
+//     // console.log(Math.floor(document.documentElement.scrollTop), anchorMap[Math.floor(document.documentElement.scrollTop)])
+//     // if (anchorMap[Math.floor(document.documentElement.scrollTop)]) {
+//     //     window.location.href=anchorMap[Math.floor(document.documentElement.scrollTop)];
+//     // }
+//     console.log("now:", top)
+//     let left = findLeft(top)
+//     console.log("left:", left)
+//     if (left && left !== -1) {
+//         window.location.href=anchorMap[left]
+//         document.documentElement.scrollTop = top;
+//     }
+// })
