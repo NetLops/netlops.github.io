@@ -169,7 +169,7 @@ window.addEventListener('scroll', function(event) {
     let left = findLeft(top)
     console.log("left:", left)
     if (left && left !== -1) {
-      window.location.href=anchorMap[left]
+        window.location.href=anchorMap[left]
+        document.documentElement.scrollTop = top + 1;
     }
-    document.documentElement.scrollTop = top + 1;
 })
