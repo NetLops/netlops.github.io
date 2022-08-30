@@ -174,6 +174,9 @@ window.addEventListener('scroll', function(event) {
                 window.location.href=anchorMap[left]
                 document.documentElement.scrollTop = top;
             }
+        } else {
+            window.location.href="#"
+            document.documentElement.scrollTop = top;
         }
     }
 })
